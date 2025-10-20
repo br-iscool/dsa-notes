@@ -31,3 +31,13 @@ An algorithm is in polynomial time if its time complexity is at most *O*($n^{k}$
 
 ### Sorting
 
+Sorting is a fundamental algorithm that many efficient algorithms use as a subroutine. For example, the problem "does an array contain two equal elements?" is easier to solve after sorting. 
+
+The basic problem is as follows:\
+*Given an array that contains n elements, your task is to sort the elements in increasing order.*
+
+The most simple sorting algorithms work in *O*($n^{2}$) time. Examples include bubble sort, insertion sort, and selection sort. However, more optimized algorithms usually sort in *O*(n log n) time. Examples include merge sort, quick sort, and heap sort. 
+
+In competition, however, it is usually not required to use your own implementation of a sorting algorithm over the built in function ```sort```. Only if the datasets are large should you implement a sorting algorithm. 
+
+### Searching
