@@ -40,6 +40,8 @@ The most simple sorting algorithms work in *O*($n^{2}$) time. Examples include b
 
 In competition, however, it is usually not required to use your own implementation of a sorting algorithm over the built in function ```sort```. Only if the datasets are large should you implement a sorting algorithm. 
 
+View ```2-sorting.py``` for bubble sort and merge sort. 
+
 ### Searching
 
 If the list is not sorted, a general method to search for an element in an array is to use a for loop to iterate through the list. This is known as linear search and the time complexity of this approach would be *O*(n), however for sorted lists, there exists a faster approach.
@@ -48,3 +50,4 @@ An example of an algorithm that can search through sorted lists faster is binary
 
 Binary search works by recursively dividing the input list into two lists, separated by a midpoint value. It then checks if the midpoint value is equal to the target value. If it is, then the search terminates. However, if it isn't, then the algorithm will check if the target value is lower or higher than the midpoint value, and adjust the end or starting index to match. Then, depending on which list the target value is in, the algorithm will then divide that list into two and repeat the process until the target value is found in the midpoint. Because the searching region halves at each step, the time complexity of binary search is *O*($\log n$).
 
+View ```3-searching.py``` for linear search and binary search. 
