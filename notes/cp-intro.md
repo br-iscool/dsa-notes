@@ -1,6 +1,6 @@
-# Competitive Programming Notes
+# Competitive Programming Introductory Notes
 
-### Time Complexity
+## Time Complexity
 
 The time complexity of an algorithm estimates the amount of time an algorithm will use for some input. It is represented as a function whose variable is the size of the input (usually the variable ```n```). 
 
@@ -29,7 +29,7 @@ The following time complexity classes detail the most common classes algorithms 
 
 An algorithm is in polynomial time if its time complexity is at most *O*($n^{k}$) where $k$ is a constant. All of the above time complexity classes are polynomial except exponential and factorial time. In most algorithms, the constant $k$ is usually small, meaning polynomial time algorithms are usually efficient. 
 
-### Sorting
+## Sorting
 
 Sorting is a fundamental algorithm that many efficient algorithms use as a subroutine. For example, the problem "does an array contain two equal elements?" is easier to solve after sorting. 
 
@@ -42,7 +42,7 @@ In competition, however, it is usually not required to use your own implementati
 
 View ```2-sorting.py``` for bubble sort and merge sort. 
 
-### Searching
+## Searching
 
 If the list is not sorted, a general method to search for an element in an array is to use a for loop to iterate through the list. This is known as linear search and the time complexity of this approach would be *O*(n), however for sorted lists, there exists a faster approach.
 

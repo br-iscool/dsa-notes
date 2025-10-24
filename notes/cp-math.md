@@ -1,6 +1,6 @@
 # Mathematics for Competitive Programming Notes
 
-### Summation
+## Summation
 
 There are a few basic sum formulas that should be memorized. 
 
@@ -16,7 +16,7 @@ There are a few basic sum formulas that should be memorized.
   - For example: 2, 4, 8, 16, 32
   - The sum is calculated by ```(bk - a) / (k - 1)```, where *k* is the ratio between two consecutive numbers. 
 
-### Set Theory
+## Set Theory
 
 A set is a collection of elements, defined using curly braces. For example, ```X = {3, 5, 6}```. This set would contain the elements *2, 4, 7*. The symbol $\emptyset$ denotes an empty set and |S| refers to the size of a set (the number of elements in a set). 
 
@@ -36,7 +36,7 @@ If all elements of set A are also elements of set S, then A is known as a subset
 
 The total number of subsets can always be found with $2^{|S|}$, where $|S|$ is the size of the set. 
 
-### Functions
+## Functions
 
 The value of a logical expression is either True (1) or False (0). 
 
