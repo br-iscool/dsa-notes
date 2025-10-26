@@ -30,6 +30,33 @@ It is possible to use the ```list()``` constructor to create lists.
 
 ### Tuple
 
+A tuple is another built-in data structure in Python that can be created with round brackets (parentheses) ```tuple1 = ()```. The primary defining characteristic between lists and tuples is mutability. Tuples cannot be modified, added to, or deleted once they have been created. Otherwise, tuples are ordered and allow duplicates. 
+
+In order to create a tuple with only one item, a comma has to be placed behind the item. ```tuple1 = ("mango",)```
+
+It is possible to use the ```tuple()``` constructor to create tuples. 
+
 ### Set
 
-### Dict
+Sets are another type of data structure in Python that are created with curly brackets ```set1 = {}```. Sets are unordered, unindexed, and do not allow duplicates. Because they are unordered, set items appear in a different order each time they are used, and cannot be referred to by an index.
+
+A notable property of sets is their mutability. Existing items in the set cannot be modified, but items can be added or removed. 
+
+It is possible to use the ```set()``` constructor to create sets. 
+
+Frozensets are versions of sets that are completely immutable. Unlike regular sets, elements can't be added or removed from frozensets. It is possible to use the ```frozenset()``` constructor to create frozensets. 
+
+### Dictionary
+
+Dictionaries are a data structure in Python that are used to store data in ```key: value``` pairs. Dictionaries are created using curly brackets, and have keys and values. Dictionaries are ordered, mutable, and do not allow duplicates.
+
+An example of a dictionary:
+```python
+dict1 = {
+   "type": "fruit",
+   "name": "mango"
+}
+```
+
+It is possible to use the ```dict()``` constructor to create dictionaries.
+
