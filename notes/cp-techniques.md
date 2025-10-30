@@ -36,6 +36,15 @@ The best method is to make an algorithm that always selects the next possible ev
 
 Again, let us consider a different problem where we are given $n$ tasks with durations and deadlines and our task is to choose an order to perform the task. For each task, we earn $d-x$ points where $d$ is the task's deadline and $x$ is the moment we can finish the task. What is the largest possible total score we can obtain?
 
+For example, suppose that the tasks are as follows:
+| task | duration | deadline |
+|------|----------|----------|
+| A    | 4        | 2        |
+| B    | 3        | 5        |
+| C    | 2        | 7        |
+| D    | 4        | 5        |
+
+
 ### Minimizing Sums
 
 ### Data Compression
