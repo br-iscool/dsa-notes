@@ -28,11 +28,11 @@ The technique is usually used when there is an efficient way to combine the resu
 
 A *greedy algorithm* constructs a solution by always making a choice that looks the best at the moment. A greedy algorithm doesn't take back its choices, but directly constructs the final solution. For this reason, greedy algorithms are usually very efficient but can be slow in worst-case scenarios. 
 
+### Problems involving scheduling
+
 Many problems involving schedules are solved with greedy algorithms. For example, given $n$ events with starting and ending times, find a schedule that includes as many events as possible without having overlap / partial events. 
 
 The best method is to make an algorithm that always selects the next possible event that ends as early as possible. It turns out that this algorithm always produces an optimal solution, no matter the number of events. The reason for this is that it is always optimal to first select an event that ends as early as possible. After, the algorithm selects the next event using the same strategy. This is an example of a greedy algorithm being correct. 
-
-### Tasks and Deadlines
 
 Again, let us consider a different problem where we are given $n$ tasks with durations and deadlines and our task is to choose an order to perform the task. For each task, we earn $d-x$ points where $d$ is the task's deadline and $x$ is the moment we can finish the task. What is the largest possible total score we can obtain?
 
@@ -44,8 +44,9 @@ For example, suppose that the tasks are as follows:
 | C    | 2        | 7        |
 | D    | 4        | 5        |
 
+In this case, an optimal schedule would be C, B, A, D. This solution earns -10 points in total. The correct strategy for this would be to perform the tasks sorted by their durations in increasing order. The reason for this is that if we ever perform two tasks one after another such that the first task takes longer than the second task, we can obtain a better solution if we swap the order of the two tasks. 
 
-### Minimizing Sums
+### Problems involving minimizing sums
 
 ### Data Compression
 
