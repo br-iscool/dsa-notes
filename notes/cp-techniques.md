@@ -46,8 +46,12 @@ For example, suppose that the tasks are as follows:
 
 In this case, an optimal schedule would be C, B, A, D. This solution earns -10 points in total. The correct strategy for this would be to perform the tasks sorted by their durations in increasing order. The reason for this is that if we ever perform two tasks one after another such that the first task takes longer than the second task, we can obtain a better solution if we swap the order of the two tasks. 
 
-### Problems involving minimizing sums
-
 ### Data Compression
+
+In data compression, a binary code gives each character in a string its own unique sequence of bits (called a codeword). In simpler terms, characters in a string get represented by ones and zeros to take up less space. 
+
+If each character is represented by codewords with the same length, the code would be a constant-length code. However, to further compress strings, we can use variable-length codes, meaning that lesser used characters would be represented by longer codewords, as opposed to often used codewords. The length of most strings would then decrease. 
+
+The most optimal code would produce a compressed string as short as possible, in order to reduce the size it takes. 
 
 ## Dynamic Programming
