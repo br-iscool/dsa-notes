@@ -55,3 +55,8 @@ If each character is represented by codewords with the same length, the code wou
 The most optimal code would produce a compressed string as short as possible, in order to reduce the size it takes. 
 
 ## Dynamic Programming
+
+Dynamic programming is a technique that combines the correctness of complete search and the efficiency of greedy algorithms. Dynamic programming can be applied if the problem can be divided into smaller subproblems which are solved independently. There are two main uses for dynamic programming:
+
+- Finding an optimal solution
+- Counting the total number of possible solutions 
