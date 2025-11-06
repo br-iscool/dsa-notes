@@ -95,3 +95,25 @@ f(x) =
 f(x - c) + 1, & \text{if } x > 0.
 \end{cases}
 $$
+
+If the value of x is less than 0, then the function would return infinity, as we cannot have a negative amount of coins. If the function is 0, then x would also be 0, as no coins are needed for an empty sum. If the value of x is greater than 0, then we recursively go through the possibilities of choosing the first coin for the sum. 
+
+### Memoization
+
+The main idea of dynamic programming is to use memoization to efficiently calculate values of a recursive function. This means that the values of the function are stored in an array after calculating them. For each parameter, the value of the function is calculated recursively once, and in future uses, the value can be directly retrieved from the array. 
+
+Memoization is much more efficient, because the answer for each parameter $x$ is calculated recursively only once. Because the values can be efficiently retrieved, the time complexity of the coin problem algorithm with memoization is $O(nk)$, where n is the target sum and k is the number of coins. 
+
+### Problems involving finding specific subsets
+
+These types of problems often involve a set of objects, and subsets with specific properties have to be found from the original set. Problems like these are often solved with dynamic programming. 
+
+Consider the following problem:\
+Given a list of weights ```[w1, w2, ...]```, determine all sums that can be constructed using the weights. For example, if the weights are ```[1, 3, 3, 5]```, then all numbers between 0 and 12 are possible sums, with the exception of the numbers 2 and 10. For example, the number 7 is possible because we can select the weights ```[1, 3, 3]```. 
+
+To solve the problem, we use dynamic programming to focus on subproblems where we only use the first $k$ weights to construct sums. If we can construct a sum $x$ using the first $k$ weights, then ```possible(x, k) = true```. Otherwise, let ```possible(x, k) = false```. This can be calculated using the following equation:\
+```possible(x, k) = possible(x, wk, k - 1) OR possible(x, k - 1)```, where ```wk``` is the first $k$ weights. 
+
+The formula is based on the fact that we can either use or not use the weight $wk$ in the sum. If we do use it, the remaining task is to form the sum $x - wk$ using the first $k - 1$ weights, and if we do not use $wk$, then form the sum $x$ using the first $k - 1$ weights. 
+
+After calculating all these values, ```possible(x, n)``` tells us whether we can construct a sum $x$ using ALL of the weights. 
