@@ -60,3 +60,38 @@ Dynamic programming is a technique that combines the correctness of complete sea
 
 - Finding an optimal solution
 - Counting the total number of possible solutions 
+
+Let us focus on a problem that involves money. Given a set of values ```coins = {c1, c2, c3, ...}``` and a target sum of money ```n```, our task is to form the sum ```n``` using as few coins as possible. 
+
+The idea in dynamic programming is to formulate the problem recursively so that the final solution to the problem can be calculated from the solutions of smaller subproblems. Let ```solve(x)``` denote the minimum number of coins required for a sum $x$. The value of the function depends on the value of the coins. For example, if ```coins = {1, 3, 4}```, the first values of the function are as follows:
+
+$solve(0) = 0$\
+$solve(1) = 1$\
+$solve(2) = 2$\
+$solve(3) = 1$\
+$solve(4) = 1$\
+$solve(5) = 2$\
+$solve(6) = 2$\
+$solve(7) = 2$\
+$solve(8) = 2$\
+$solve(9) = 3$\
+$solve(0) = 3$
+
+For example, ```solve(10) = 3```, because at least three coins are required to form the sum 10. The optimal solution is $(3 + 3 + 4) = 10$.
+
+The values of ```solve()``` can be recursively calculated from its smaller values. The idea is to focus on the first coin that we choose for the sum. For example, in the above scenario, the first coin can either be 1, 3, or 4. If we choose coin 1, the remaining task is to form the sum 9 using the minimum number of coins, which is a subproblem of the entire problem. The same applies to coins 3 and 4. The following formula can be then derived to calculate the minimum number of coins for this set.
+
+```solve(x) = min(solve(x - 1) + 1, solve(x - 3) + 1, solve(x - 4) + 1)```
+
+The base case of this recursion is ```solve(0) = 0```, because no coins are needed for an empty sum. 
+
+Now, we are ready to get a general recursive function that calculates the minimum number of coins needed for a sum $x$:
+
+$$
+f(x) =
+\begin{cases}
+\infty, & \text{if } x < 0, \\
+0, & \text{if } x = 0, \\
+f(x - c) + 1, & \text{if } x > 0.
+\end{cases}
+$$
