@@ -117,3 +117,21 @@ To solve the problem, we use dynamic programming to focus on subproblems where w
 The formula is based on the fact that we can either use or not use the weight $wk$ in the sum. If we do use it, the remaining task is to form the sum $x - wk$ using the first $k - 1$ weights, and if we do not use $wk$, then form the sum $x$ using the first $k - 1$ weights. 
 
 After calculating all these values, ```possible(x, n)``` tells us whether we can construct a sum $x$ using ALL of the weights. 
+
+## Amortized Analysis
+
+### Problems involving nearest smallest elements
+
+## Range Queries
+
+### Static Array Queries
+
+### Binary Indexed Tree
+
+### Segment Tree
+
+## Bit Manipulation
+
+### Bit Representation & Operations
+
+### Bit Optimizations
