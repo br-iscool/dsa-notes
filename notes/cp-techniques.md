@@ -120,7 +120,17 @@ After calculating all these values, ```possible(x, n)``` tells us whether we can
 
 ## Amortized Analysis
 
+The time complexity of an algorithm is often easy to assess just by examining the structure of the algorithm. Specifically, analyzing the number of loops the algorithm contains and how many times each loop is performed usually works. However, sometimes a straightforward analysis is not completely accurate for getting the time complexity of an algorithm.
+
+Amortized analysis is a method that can be used to analyze algorithms for their time complexity. The idea is to estimate the total time used for all operations during the execution of the algorithm, instead of just focusing on individual operations.
+
 ### Problems involving nearest smallest elements
+
+Amortized analysis is often used to estimate the number of operations performed on a data structure. The operations might be distributed unevenly so that most operations occur during a certain phase of the algorithm, but the total number of operations is limited. 
+
+For example, consider the problem of finding for each list element the nearest smallest element (the first smaller element that precedes the current element in the list). It's possible that this element doesn't exist, in which case the algorithm should return that the element does not exist. 
+
+To solve the problem, we go through the list from left to right and maintain a stack of list elements. At each list position, we remove elements from the stack until the top element is smaller than the current element, or if the stack is empty.
 
 ## Range Queries
 
