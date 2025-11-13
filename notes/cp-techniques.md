@@ -130,13 +130,35 @@ Amortized analysis is often used to estimate the number of operations performed 
 
 For example, consider the problem of finding for each list element the nearest smallest element (the first smaller element that precedes the current element in the list). It's possible that this element doesn't exist, in which case the algorithm should return that the element does not exist. 
 
-To solve the problem, we go through the list from left to right and maintain a stack of list elements. At each list position, we remove elements from the stack until the top element is smaller than the current element, or if the stack is empty.
+To solve the problem, we go through the list from left to right and maintain a stack of list elements. At each list position, we remove elements from the stack until the top element is smaller than the current element, or if the stack is empty. Then, we return the top element being the nearest smallest element of the current element, or if the stack is empty, then there is no such element. Finally, we add the current element to the stack. 
 
 ## Range Queries
 
-### Static Array Queries
+In a range query, our task is to calculate a value based on a subarray of an array. Typical range queries include:
+
+- sum(a, b): calculate the sum of values in range [a, b]
+- min(a, b): calculate the minimum value in range [a, b]
+- max(a, b): calculate the maximum value in range [a, b]
+
+For example, consider the range [3, 6] in the list [1, 3, 8, 4, 6, 1, 3, 4].
+
+In this case, sum(3, 6) = 14, min(3, 6) = 1, and max(3, 6) = 6. Note that the range refers to the index of the list. 
+
+A simple way to process range queries is to use a loop that goes through all values in the specified range. For example, the following function is used to process sum queries on a list:
+
+```python
+def sum(start_index, end_index, array):
+    sum = 0
+    for i in range(start_index, end_index + 1)
+        sum += array[i]
+    return sum
+```
+
+This function works in *O*(n) time, where n is the size of the array. However, if both *n* and the number of queries *q* are large, this algorithm is slow. Fortunately, there are ways to process range queries more efficiently. 
 
 ### Binary Indexed Tree
+
+A binary indexed tree or a Fenwick tree supports two *O*(log n) time operations on an array: processing a range sum query and updating a value.
 
 ### Segment Tree
 
