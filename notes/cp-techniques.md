@@ -156,10 +156,6 @@ def sum(start_index, end_index, array):
 
 This function works in *O*(n) time, where n is the size of the array. However, if both *n* and the number of queries *q* are large, this algorithm is slow. Fortunately, there are ways to process range queries more efficiently. 
 
-### Binary Indexed Tree
-
-A binary indexed tree or a Fenwick tree supports two *O*(log n) time operations on an array: processing a range sum query and updating a value.
-
 ### Segment Tree
 
 ## Bit Manipulation
