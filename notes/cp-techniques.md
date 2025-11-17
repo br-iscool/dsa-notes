@@ -156,10 +156,12 @@ def sum(start_index, end_index, array):
 
 This function works in *O*(n) time, where n is the size of the array. However, if both *n* and the number of queries *q* are large, this algorithm is slow. Fortunately, there are ways to process range queries more efficiently. 
 
-### Segment Tree
-
 ## Bit Manipulation
 
-### Bit Representation & Operations
+All data in computer programs are internally stored in bits. Bits are the smallest unit of storage on a computer and are represented by numbers 0 and 1. 
+
+In programming, an *n* bit integer is internally stored as a binary number that consists of *n* bits. In languages like C++, data types like ```int``` have a fixed size, with ```int``` being a 32-bit type, meaning that every ```int``` consists of 32 bits. However, in Python, some data types are variable length, meaning that the Python interpreter dynamically allocates additional memory to accomodate for the size. ```int```, ```bool```, and ```float``` in Python are variable-size data types. 
+
+### Bit Operations
 
 ### Bit Optimizations
