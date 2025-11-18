@@ -164,4 +164,16 @@ In programming, an *n* bit integer is internally stored as a binary number that 
 
 ### Bit Operations
 
+Python provides bitwise operators to perform bitwise operations on the binary representations of integers. These operations include AND, OR, XOR, NOT, left shift, and right shift. 
+
+- AND (&):
+  - The AND operation ```x & y``` produces a number that has one bit in positions where both $x$ and $y$ have one bits. For example, ```x = 10110``` & ```y = 11010``` = ```10010```. 
+  - One good use of the AND operation is to check if a number $x$ is even because ```x & 1 = 0``` if $x$ is even and ```x & 1 = 1``` if $x$ is odd. 
+- OR (|):
+  - The OR operation ```x | y``` produces a number that has one bit in positions where at least $x$ or $y$ has one bit. For example, ```x = 10110``` | ```y = 11010``` = ```11110```.
+- XOR (^):
+- NOT (~):
+- left shift (<<):
+- right shift (>>):
+
 ### Bit Optimizations
